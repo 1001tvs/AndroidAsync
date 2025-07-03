@@ -3,6 +3,7 @@ Generate Jar package: In the AndroidAsync folder, allow the following instructio
 ````
 ./gradlew makeJar
 ````
+Location: AndroidAsync\build\libs\async.jar
 The following is the README content of the original project.
 # AndroidAsync
 
