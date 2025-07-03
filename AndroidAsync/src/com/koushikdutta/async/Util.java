@@ -206,12 +206,16 @@ public class Util {
         wc.onWriteable();
     }
     public static void writeAll(DataSink sink, byte[] bytes, CompletedCallback callback) {
-        ByteBuffer bb = ByteBufferList.obtain(bytes.length);
-        bb.put(bytes);
-        bb.flip();
-        ByteBufferList bbl = new ByteBufferList();
-        bbl.add(bb);
-        writeAll(sink, bbl, callback);
+        try{
+            ByteBuffer bb = ByteBufferList.obtain(bytes.length);
+            bb.put(bytes);
+            bb.flip();
+            ByteBufferList bbl = new ByteBufferList();
+            bbl.add(bb);
+            writeAll(sink, bbl, callback);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static <T extends AsyncSocket> T getWrappedSocket(AsyncSocket socket, Class<T> wrappedClass) {
