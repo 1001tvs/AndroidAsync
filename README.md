@@ -1,3 +1,9 @@
+This is a fork of koush/AndroidAsync.
+Generate Jar package: In the AndroidAsync folder, allow the following instructions.
+````
+./gradlew makeJar
+````
+The following is the README content of the original project.
 # AndroidAsync
 
 AndroidAsync is a low level network protocol library. If you are looking for an easy to use, higher level, Android aware,
